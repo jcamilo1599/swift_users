@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9A9A883829550EA3000923B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883729550EA3000923B9 /* User.swift */; };
-		9A9A883C295510C8000923B9 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883B295510C8000923B9 /* UsersView.swift */; };
+		9A9A883C295510C8000923B9 /* UsersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883B295510C8000923B9 /* UsersPage.swift */; };
 		9A9A883F29551191000923B9 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883E29551191000923B9 /* SplashScreenView.swift */; };
 		9A9A8843295562B7000923B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9A9A8842295562B7000923B9 /* Alamofire */; };
 		9A9A88452955639B000923B9 /* UsersNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A88442955639B000923B9 /* UsersNetworks.swift */; };
+		9A9A884829556C9B000923B9 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A884729556C9B000923B9 /* Environments.swift */; };
+		9AAB10E22955EEFA008515E2 /* NoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB10E12955EEFA008515E2 /* NoInfo.swift */; };
+		9AAB10E429568F0B008515E2 /* CardAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB10E329568F0B008515E2 /* CardAtom.swift */; };
+		9AAB10E6295690D8008515E2 /* PostsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB10E5295690D8008515E2 /* PostsPage.swift */; };
 		9AD7499D2955025F0047DF32 /* UsersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7499C2955025F0047DF32 /* UsersApp.swift */; };
 		9AD749A1295502600047DF32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD749A0295502600047DF32 /* Assets.xcassets */; };
 		9AD749A5295502600047DF32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD749A4295502600047DF32 /* Preview Assets.xcassets */; };
@@ -19,9 +23,13 @@
 
 /* Begin PBXFileReference section */
 		9A9A883729550EA3000923B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		9A9A883B295510C8000923B9 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		9A9A883B295510C8000923B9 /* UsersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPage.swift; sourceTree = "<group>"; };
 		9A9A883E29551191000923B9 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		9A9A88442955639B000923B9 /* UsersNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNetworks.swift; sourceTree = "<group>"; };
+		9A9A884729556C9B000923B9 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
+		9AAB10E12955EEFA008515E2 /* NoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInfo.swift; sourceTree = "<group>"; };
+		9AAB10E329568F0B008515E2 /* CardAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAtom.swift; sourceTree = "<group>"; };
+		9AAB10E5295690D8008515E2 /* PostsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPage.swift; sourceTree = "<group>"; };
 		9AD749992955025F0047DF32 /* Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Users.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD7499C2955025F0047DF32 /* UsersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersApp.swift; sourceTree = "<group>"; };
 		9AD749A0295502600047DF32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,8 +52,10 @@
 		9A9A88342955070F000923B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9AAB10DF2955EE77008515E2 /* Atoms */,
 				9A9A883D2955117E000923B9 /* Organisms */,
 				9A9A883A295510B7000923B9 /* Pages */,
+				9AAB10E02955EE86008515E2 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -68,7 +78,8 @@
 		9A9A883A295510B7000923B9 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				9A9A883B295510C8000923B9 /* UsersView.swift */,
+				9A9A883B295510C8000923B9 /* UsersPage.swift */,
+				9AAB10E5295690D8008515E2 /* PostsPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -87,6 +98,30 @@
 				9A9A88442955639B000923B9 /* UsersNetworks.swift */,
 			);
 			path = Networks;
+			sourceTree = "<group>";
+		};
+		9A9A884629556C8E000923B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A9A884729556C9B000923B9 /* Environments.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9AAB10DF2955EE77008515E2 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB10E329568F0B008515E2 /* CardAtom.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		9AAB10E02955EE86008515E2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB10E12955EEFA008515E2 /* NoInfo.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		9AD749902955025F0047DF32 = {
@@ -108,6 +143,7 @@
 		9AD7499B2955025F0047DF32 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				9A9A884629556C8E000923B9 /* Resources */,
 				9A9A8840295560D3000923B9 /* Networks */,
 				9A9A88362955075C000923B9 /* Models */,
 				9A9A883529550716000923B9 /* ViewModel */,
@@ -205,10 +241,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9A88452955639B000923B9 /* UsersNetworks.swift in Sources */,
+				9AAB10E22955EEFA008515E2 /* NoInfo.swift in Sources */,
 				9AD7499D2955025F0047DF32 /* UsersApp.swift in Sources */,
 				9A9A883F29551191000923B9 /* SplashScreenView.swift in Sources */,
+				9AAB10E429568F0B008515E2 /* CardAtom.swift in Sources */,
+				9A9A884829556C9B000923B9 /* Environments.swift in Sources */,
+				9AAB10E6295690D8008515E2 /* PostsPage.swift in Sources */,
 				9A9A883829550EA3000923B9 /* User.swift in Sources */,
-				9A9A883C295510C8000923B9 /* UsersView.swift in Sources */,
+				9A9A883C295510C8000923B9 /* UsersPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,13 +7,23 @@
 
 import SwiftUI
 
-struct UsersView: View {
+struct UsersPage: View {
     @State private var users: [UserModel] = []
     @State private var showLoading = true
+    @State var showPosts = false
     
     var body: some View {
         NavigationView {
-            Text("Usuarios...")
+            if (users.isEmpty) {
+                NoInfoView()
+            } else {
+                List {
+                    ForEach(0..<users.count, id: \.self) { index in
+                        CardAtom(user: users[index])
+                    }
+                }
+                .listStyle(InsetGroupedListStyle())
+            }
         }
         .overlay(SplashScreenView(show: showLoading))
         .onAppear() {
@@ -37,8 +47,8 @@ struct UsersView: View {
     }
 }
 
-struct UsersView_Previews: PreviewProvider {
+struct UsersPage_Previews: PreviewProvider {
     static var previews: some View {
-        UsersView()
+        UsersPage()
     }
 }
