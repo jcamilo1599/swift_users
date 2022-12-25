@@ -9,7 +9,9 @@ import SwiftUI
 
 struct NoInfoView: View {
     var body: some View {
-        Text("List is empty")
+        Section {
+            Text("List is empty")
+        }
     }
 }
 

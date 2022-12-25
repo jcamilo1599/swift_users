@@ -16,8 +16,6 @@ struct UsersPage: View {
     
     var body: some View {
         buildBody
-            .searchable(text: $searchText)
-            .onChange(of: searchText, perform: changeSearch)
             .accentColor(.orange)
             .overlay(SplashScreenView(show: showLoading))
             .onAppear() {
@@ -27,13 +25,17 @@ struct UsersPage: View {
     
     private var buildBody:some View {
         NavigationView {
-            if filteredUsers.isEmpty {
-                NoInfoView()
-            } else {
-                List {
-                    ForEach(filteredUsers, id: \.id) { user in
-                        CardUserAtom(user: user)
-                    }
+            List {
+                TextField("Search", text: $searchText)
+                    .textInputAutocapitalization(.never)
+                    .onChange(of: searchText, perform: changeSearch)
+                
+                if filteredUsers.isEmpty {
+                    NoInfoView()
+                } else {
+                        ForEach(filteredUsers, id: \.id) { user in
+                            CardUserAtom(user: user)
+                        }
                 }
             }
         }
