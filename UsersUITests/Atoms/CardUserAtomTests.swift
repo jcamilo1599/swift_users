@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class CardAtomTest: XCTestCase {
+final class CardUserAtomTest: XCTestCase {
     private var app: XCUIApplication!
 
     override func setUpWithError() throws {

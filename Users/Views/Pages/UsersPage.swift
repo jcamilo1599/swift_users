@@ -15,32 +15,38 @@ struct UsersPage: View {
     @State var showPosts = false
     
     var body: some View {
+        buildBody
+            .searchable(text: $searchText)
+            .onChange(of: searchText, perform: changeSearch)
+            .accentColor(.orange)
+            .overlay(SplashScreenView(show: showLoading))
+            .onAppear() {
+                getUsers()
+            }
+    }
+    
+    private var buildBody:some View {
         NavigationView {
             if filteredUsers.isEmpty {
                 NoInfoView()
             } else {
                 List {
-                    ForEach(0..<filteredUsers.count, id: \.self) { index in
-                        CardAtom(user: filteredUsers[index])
+                    ForEach(filteredUsers, id: \.id) { user in
+                        CardUserAtom(user: user)
                     }
                 }
-                .listStyle(InsetGroupedListStyle())
             }
         }
-        .searchable(text: $searchText)
-        .onChange(of: searchText) { search in
-            if search.isEmpty {
-                filteredUsers = users
-            } else {
-                filteredUsers = users.filter { user in
-                    user.name.lowercased().contains(search.lowercased())
-                }
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+    }
+    
+    private func changeSearch(search: String) {
+        if search.isEmpty {
+            filteredUsers = users
+        } else {
+            filteredUsers = users.filter { user in
+                user.name.lowercased().contains(search.lowercased())
             }
-        }
-        .accentColor(.orange)
-        .overlay(SplashScreenView(show: showLoading))
-        .onAppear() {
-            getUsers()
         }
     }
     

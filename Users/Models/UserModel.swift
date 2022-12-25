@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - UserElement
+// MARK: - UserModel
 struct UserModel: Codable {
     let id: Int
     let name, username, email, phone, website: String

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardAtom: View {
+struct CardUserAtom: View {
     var user: UserModel
     
     var body: some View {
@@ -29,19 +29,18 @@ struct CardAtom: View {
             }
             
             NavigationLink {
-                EmptyView()
+                PostsPage(userId: user.id, userName: user.name)
             } label: {
                 Text("VIEW POSTS")
-                    .foregroundColor(.orange)
             }
         }
     }
 }
 
-struct CardAtom_Previews: PreviewProvider {
+struct CardUserAtom_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            CardAtom(user: UserModel(
+            CardUserAtom(user: UserModel(
                 id: 0,
                 name: "Juan",
                 username: "juan",

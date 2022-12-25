@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A01D65D29577DE90017B509 /* PostsNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01D65C29577DE90017B509 /* PostsNetworks.swift */; };
+		9A01D65F2957A01E0017B509 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01D65E2957A01E0017B509 /* PostsModel.swift */; };
+		9A01D6612957BDFA0017B509 /* CardPostAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A01D6602957BDFA0017B509 /* CardPostAtom.swift */; };
 		9A4E20612956C8FD004A2C83 /* UserPagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E20602956C8FD004A2C83 /* UserPagesTests.swift */; };
-		9A9A883829550EA3000923B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883729550EA3000923B9 /* User.swift */; };
+		9A9A883829550EA3000923B9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883729550EA3000923B9 /* UserModel.swift */; };
 		9A9A883C295510C8000923B9 /* UsersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883B295510C8000923B9 /* UsersPage.swift */; };
 		9A9A883F29551191000923B9 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A883E29551191000923B9 /* SplashScreenView.swift */; };
 		9A9A8843295562B7000923B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9A9A8842295562B7000923B9 /* Alamofire */; };
 		9A9A88452955639B000923B9 /* UsersNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A88442955639B000923B9 /* UsersNetworks.swift */; };
 		9A9A884829556C9B000923B9 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9A884729556C9B000923B9 /* Environments.swift */; };
 		9AAB10E22955EEFA008515E2 /* NoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB10E12955EEFA008515E2 /* NoInfo.swift */; };
-		9AAB10E429568F0B008515E2 /* CardAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB10E329568F0B008515E2 /* CardAtom.swift */; };
+		9AAB10E429568F0B008515E2 /* CardUserAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB10E329568F0B008515E2 /* CardUserAtom.swift */; };
 		9AAB10E6295690D8008515E2 /* PostsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB10E5295690D8008515E2 /* PostsPage.swift */; };
-		9AAB11092956C2E3008515E2 /* CardAtomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB11082956C2E3008515E2 /* CardAtomTests.swift */; };
+		9AAB11092956C2E3008515E2 /* CardUserAtomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB11082956C2E3008515E2 /* CardUserAtomTests.swift */; };
 		9AD7499D2955025F0047DF32 /* UsersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7499C2955025F0047DF32 /* UsersApp.swift */; };
 		9AD749A1295502600047DF32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD749A0295502600047DF32 /* Assets.xcassets */; };
 		9AD749A5295502600047DF32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD749A4295502600047DF32 /* Preview Assets.xcassets */; };
@@ -41,18 +44,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A01D65C29577DE90017B509 /* PostsNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworks.swift; sourceTree = "<group>"; };
+		9A01D65E2957A01E0017B509 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		9A01D6602957BDFA0017B509 /* CardPostAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPostAtom.swift; sourceTree = "<group>"; };
 		9A4E20602956C8FD004A2C83 /* UserPagesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPagesTests.swift; sourceTree = "<group>"; };
-		9A9A883729550EA3000923B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9A9A883729550EA3000923B9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9A9A883B295510C8000923B9 /* UsersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPage.swift; sourceTree = "<group>"; };
 		9A9A883E29551191000923B9 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		9A9A88442955639B000923B9 /* UsersNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNetworks.swift; sourceTree = "<group>"; };
 		9A9A884729556C9B000923B9 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		9AAB10E12955EEFA008515E2 /* NoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInfo.swift; sourceTree = "<group>"; };
-		9AAB10E329568F0B008515E2 /* CardAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAtom.swift; sourceTree = "<group>"; };
+		9AAB10E329568F0B008515E2 /* CardUserAtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUserAtom.swift; sourceTree = "<group>"; };
 		9AAB10E5295690D8008515E2 /* PostsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPage.swift; sourceTree = "<group>"; };
 		9AAB10EB2956A7BD008515E2 /* UsersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAB10FA2956BF86008515E2 /* UsersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AAB11082956C2E3008515E2 /* CardAtomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAtomTests.swift; sourceTree = "<group>"; };
+		9AAB11082956C2E3008515E2 /* CardUserAtomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUserAtomTests.swift; sourceTree = "<group>"; };
 		9AD749992955025F0047DF32 /* Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Users.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD7499C2955025F0047DF32 /* UsersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersApp.swift; sourceTree = "<group>"; };
 		9AD749A0295502600047DF32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,7 +103,7 @@
 		9A9A88342955070F000923B9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9AAB10DF2955EE77008515E2 /* Atoms */,
+				9AAB10DF2955EE77008515E2 /* Molecules */,
 				9A9A883D2955117E000923B9 /* Organisms */,
 				9A9A883A295510B7000923B9 /* Pages */,
 				9AAB10E02955EE86008515E2 /* Helpers */,
@@ -115,7 +121,8 @@
 		9A9A88362955075C000923B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9A9A883729550EA3000923B9 /* User.swift */,
+				9A9A883729550EA3000923B9 /* UserModel.swift */,
+				9A01D65E2957A01E0017B509 /* PostsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				9A9A88442955639B000923B9 /* UsersNetworks.swift */,
+				9A01D65C29577DE90017B509 /* PostsNetworks.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -153,12 +161,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9AAB10DF2955EE77008515E2 /* Atoms */ = {
+		9AAB10DF2955EE77008515E2 /* Molecules */ = {
 			isa = PBXGroup;
 			children = (
-				9AAB10E329568F0B008515E2 /* CardAtom.swift */,
+				9AAB10E329568F0B008515E2 /* CardUserAtom.swift */,
+				9A01D6602957BDFA0017B509 /* CardPostAtom.swift */,
 			);
-			path = Atoms;
+			path = Molecules;
 			sourceTree = "<group>";
 		};
 		9AAB10E02955EE86008515E2 /* Helpers */ = {
@@ -188,7 +197,7 @@
 		9AAB11052956BFF6008515E2 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
-				9AAB11082956C2E3008515E2 /* CardAtomTests.swift */,
+				9AAB11082956C2E3008515E2 /* CardUserAtomTests.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -382,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AAB11092956C2E3008515E2 /* CardAtomTests.swift in Sources */,
+				9AAB11092956C2E3008515E2 /* CardUserAtomTests.swift in Sources */,
 				9A4E20612956C8FD004A2C83 /* UserPagesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,13 +401,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9A88452955639B000923B9 /* UsersNetworks.swift in Sources */,
+				9A01D65D29577DE90017B509 /* PostsNetworks.swift in Sources */,
 				9AAB10E22955EEFA008515E2 /* NoInfo.swift in Sources */,
 				9AD7499D2955025F0047DF32 /* UsersApp.swift in Sources */,
 				9A9A883F29551191000923B9 /* SplashScreenView.swift in Sources */,
-				9AAB10E429568F0B008515E2 /* CardAtom.swift in Sources */,
+				9A01D65F2957A01E0017B509 /* PostsModel.swift in Sources */,
+				9A01D6612957BDFA0017B509 /* CardPostAtom.swift in Sources */,
+				9AAB10E429568F0B008515E2 /* CardUserAtom.swift in Sources */,
 				9A9A884829556C9B000923B9 /* Environments.swift in Sources */,
 				9AAB10E6295690D8008515E2 /* PostsPage.swift in Sources */,
-				9A9A883829550EA3000923B9 /* User.swift in Sources */,
+				9A9A883829550EA3000923B9 /* UserModel.swift in Sources */,
 				9A9A883C295510C8000923B9 /* UsersPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
