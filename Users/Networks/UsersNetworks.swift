@@ -8,10 +8,8 @@
 import Foundation
 import Alamofire
 
-final class UsersNetworks: ObservableObject {
+class UsersNetworks: UsersNetworksDelegate {
     private let path = "/users"
-    
-    static let shared = UsersNetworks()
     
     func getUsers(
         success: @escaping (_ users: [UserModel]) -> (),

@@ -40,5 +40,19 @@ final class UsersPageTests: XCTestCase {
         searchField.typeText("Glenna")
         
         app.staticTexts["VIEW POSTS"].firstMatch.press(forDuration: 0.1)
+        
+        app.swipeUp()
+        app.swipeDown()
+        
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        
+        searchField.tap()
+        searchField.typeText("Clementine")
+        
+        searchField.doubleTap()
+        app.keys["delete"].tap()
+        
+        searchField.tap()
+        searchField.typeText("Clementine")
     }
 }

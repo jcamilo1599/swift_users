@@ -8,56 +8,76 @@
 import SwiftUI
 
 struct PostsPage: View {
-    @State private var posts: [PostsModel] = []
-    @State private var showLoading = true
+    @State private var showAlert = false
+    @ObservedObject private var viewModel: PostsViewModel
+    var user: UserModel
     
-    var userId: Int
-    var userName: String
+    init(user: UserModel) {
+        self.viewModel = PostsViewModel(userId: user.id)
+        self.user = user
+    }
     
     var body: some View {
         buildBody
-            .navigationBarTitle(userName, displayMode: .large)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text(user.name).font(.headline)
+                        Text(user.email).font(.subheadline)
+                    }
+                }
+            }
             .accentColor(.orange)
-            .overlay(SplashScreenView(show: showLoading))
+            .overlay(SplashScreenView(show: viewModel.showLoading))
             .onAppear() {
-                getPosts()
+                viewModel.getPosts()
             }
     }
     
     private var buildBody:some View {
-        List {
-            if posts.isEmpty {
-                NoInfoView()
-            } else {
-                
-                ForEach(posts, id: \.id) { post in
-                    CardPostAtom(post: post)
+        ZStack {
+            List {
+                if viewModel.posts.isEmpty {
+                    NoInfoView()
+                } else {
+                    ForEach(viewModel.posts, id: \.id) { post in
+                        CardPostAtom(post: post)
+                    }
                 }
             }
-        }
-    }
-    
-    private func getPosts() {
-        PostsNetworks.shared.getPosts { response in
-            hideLoading()
-            posts.append(contentsOf: response)
-        } failure: { error in
-            hideLoading()
-        }
-    }
-    
-    private func hideLoading(){
-        withAnimation(.spring()) {
-            showLoading.toggle()
+            
+            FloatingButton(action: {
+                showAlert = true
+            }, icon: "phone.fill")
+                .alert(
+                    user.name + " number is " + user.phone,
+                    isPresented: $showAlert
+                ) {
+                    Button("OK", role: .cancel) { }
+                }
         }
     }
 }
 
 struct PostsPage_Previews: PreviewProvider {
     static var previews: some View {
-        PostsPage(
-            userId: 1,
-            userName: "Juan Camilo"
-        )
+        NavigationView {
+            PostsPage(user: UserModel(
+                id: 1,
+                name: "Juan",
+                username: "juan",
+                email: "juancamilomarinochoa@gmail.com",
+                phone: "3005190365",
+                website: "",
+                address: Address(
+                    street: "",
+                    suite: "",
+                    city: "",
+                    zipcode: "",
+                    geo: Geo(lat: "", lng: "")
+                ),
+                company: Company(name: "", catchPhrase: "", bs: "")
+            ))
+        }
     }
 }

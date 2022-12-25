@@ -16,11 +16,13 @@ struct CardUserAtom: View {
                 Text(user.name)
                     .foregroundColor(.orange)
                     .font(.system(size: 26, weight: .semibold))
+                    .padding(.bottom, 10)
                 HStack {
                     Image(systemName: "phone.fill")
                         .foregroundColor(.orange)
                     Text(user.phone)
                 }
+                .padding(.bottom, 2)
                 HStack {
                     Image(systemName: "envelope")
                         .foregroundColor(.orange)
@@ -29,7 +31,7 @@ struct CardUserAtom: View {
             }
             
             NavigationLink {
-                PostsPage(userId: user.id, userName: user.name)
+                PostsPage(user: user)
             } label: {
                 Text("VIEW POSTS")
             }
@@ -45,7 +47,7 @@ struct CardUserAtom_Previews: PreviewProvider {
                 name: "Juan",
                 username: "juan",
                 email: "juancamilomarinochoa@gmail.com",
-                phone: "3005190365",
+                phone: "3000000000",
                 website: "",
                 address: Address(
                     street: "",

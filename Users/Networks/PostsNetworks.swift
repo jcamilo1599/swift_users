@@ -8,11 +8,14 @@
 import Foundation
 import Alamofire
 
-class PostsNetworks: ObservableObject {
+class PostsNetworks: PostsNetworksDelegate {
     private let path = "/posts"
-    private var userId: String?
     
-    static let shared = PostsNetworks()
+    var userId: Int?
+    
+    init(userId: Int?) {
+        self.userId = userId
+    }
     
     func getPosts(
         success: @escaping (_ posts: [PostsModel]) -> (),
@@ -21,9 +24,9 @@ class PostsNetworks: ObservableObject {
         var url = Environments.URLBase + path
         
         if userId != nil {
-            url = url + "?userId=" + userId!
+            url = url + "?userId=" + String(userId!)
         }
-                
+        
         AF
             .request(url, method: .get)
             .validate(statusCode: 200...299)
