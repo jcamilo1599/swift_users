@@ -38,8 +38,12 @@ class PostsViewModel: ObservableObject {
     }
     
     func loading(){
-        withAnimation(.spring()) {
-            showLoading.toggle()
+        let seconds = DispatchTimeInterval.seconds(2)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            withAnimation(.spring()) {
+                self.showLoading.toggle()
+            }
         }
     }
 }

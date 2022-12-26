@@ -30,6 +30,8 @@ final class UsersPageTests: XCTestCase {
     }
     
     func test_complex() {
+        sleep(3)
+        
         app.swipeUp()
         app.swipeDown()
         
@@ -40,6 +42,8 @@ final class UsersPageTests: XCTestCase {
         searchField.typeText("Glenna")
         
         app.staticTexts["VIEW POSTS"].firstMatch.press(forDuration: 0.1)
+        
+        sleep(3)
         
         app.swipeUp()
         app.swipeDown()

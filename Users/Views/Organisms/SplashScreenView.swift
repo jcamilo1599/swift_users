@@ -16,6 +16,7 @@ struct SplashScreenView: View {
             if (show) {
                 backgroundView
                 animationView
+                Text("Cargando...")
             }
         }
     }
@@ -39,7 +40,7 @@ struct SplashScreenView: View {
         Circle()
             .trim(from: 0, to: 0.4)
             .stroke(Color.orange, lineWidth: 5)
-            .frame(width: 100, height: 100)
+            .frame(width: 110, height: 110)
             .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
             .animation(
                 .linear(duration: 1).repeatForever(autoreverses: false), value: isLoading

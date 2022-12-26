@@ -65,18 +65,8 @@ struct PostsPage_Previews: PreviewProvider {
             PostsPage(user: UserModel(
                 id: 1,
                 name: "Juan",
-                username: "juan",
                 email: "juancamilomarinochoa@gmail.com",
-                phone: "3005190365",
-                website: "",
-                address: Address(
-                    street: "",
-                    suite: "",
-                    city: "",
-                    zipcode: "",
-                    geo: Geo(lat: "", lng: "")
-                ),
-                company: Company(name: "", catchPhrase: "", bs: "")
+                phone: "3005190365"
             ))
         }
     }

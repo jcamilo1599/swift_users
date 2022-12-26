@@ -45,18 +45,8 @@ struct CardUserAtom_Previews: PreviewProvider {
             CardUserAtom(user: UserModel(
                 id: 0,
                 name: "Juan",
-                username: "juan",
                 email: "juancamilomarinochoa@gmail.com",
-                phone: "3000000000",
-                website: "",
-                address: Address(
-                    street: "",
-                    suite: "",
-                    city: "",
-                    zipcode: "",
-                    geo: Geo(lat: "", lng: "")
-                ),
-                company: Company(name: "", catchPhrase: "", bs: "")
+                phone: "3000000000"
             ))
         }
     }
